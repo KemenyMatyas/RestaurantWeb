@@ -1,0 +1,25 @@
+<div class="container w-50">
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div class="container-fluid">
+      <h2 class="form-signin-heading">Bejeletkezés</h2>
+      <div *ngIf="invalidLogin" class="alert alert-danger">{{error}}</div>
+      <br/>
+      <label for="username" class="sr-only">Email cím</label>
+      <input type="email" id="username" name="username" ngModel class="form-control" placeholder="User Name" required autofocus>
+      <br/>
+      <label for="password" class="sr-only">Jelszó</label>
+      <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required>
+      <br/>
+      <button class=" m-2 btn btn-primary btn-block" type="submit">Sign in
+        <div *ngIf="loading" class="spinner-border spinner-border-sm" role="status">
+            <span class="sr-only"></span>
+        </div>
+      </button>
+      <button class=" m-2 btn btn-secondary" (click)="register()">Bejeletkezés</button>
+    </div>
+  </form>
+</div>
+
+
+
+
