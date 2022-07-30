@@ -10,7 +10,7 @@ import {ApiResponse} from "../models/ApiResponse";
 export class UserApiService {
   constructor(private httpClient: HttpClient) { }
 
-  url = "https://localhost:44339"
+  url = "https://localhost:44307"
 
   login(user: string): Observable<any> {
     return  this.httpClient.post<ApiResponse>(`${this.url}/api/User/login`, user, {
