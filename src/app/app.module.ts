@@ -13,6 +13,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {AuthGuard} from "./services/auth-guard.service";
 import {HomeModule} from "./components/home/home.module";
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export function tokenGetter() {
@@ -41,7 +42,9 @@ export function tokenGetter() {
     NgbModule,
     FormsModule,
     RouterModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

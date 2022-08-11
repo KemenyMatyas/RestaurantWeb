@@ -5,7 +5,9 @@ import {HomeComponent} from "./home.component";
 import {HomeRoutingModule} from "./home-routing.module";
 import { CartComponent } from './home-components/cart/cart.component';
 import { FilterComponent } from './home-components/filter/filter.component';
-
+import {MatCardModule} from "@angular/material/card";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { FilterComponent } from './home-components/filter/filter.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
   ]
 })
 export class HomeModule { }
