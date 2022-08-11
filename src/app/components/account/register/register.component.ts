@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {NgForm} from "@angular/forms";
-import {UserApiService} from "../../services/user-api-service";
+import {UserApiService} from "../../../services/user-api-service";
 
 
 @Component({
