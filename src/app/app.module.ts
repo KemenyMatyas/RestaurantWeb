@@ -12,6 +12,7 @@ import {RouterModule} from "@angular/router";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {AuthGuard} from "./services/auth-guard.service";
 import {HomeModule} from "./components/home/home.module";
+import { FooterComponent } from './components/footer/footer.component';
 
 
 export function tokenGetter() {
@@ -24,6 +25,7 @@ export function tokenGetter() {
     LoginComponent,
     RegisterComponent,
     NavBarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
