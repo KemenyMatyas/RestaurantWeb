@@ -8,6 +8,7 @@ import { FilterComponent } from './home-components/filter/filter.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    FlexLayoutModule
   ]
 })
 export class HomeModule { }
