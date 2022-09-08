@@ -1,15 +1,19 @@
 <div class="content">
-  <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+  <div *ngIf="count != 0" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div  [fxFlex]="(100/4) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let menuItem of menuItems">
         <mat-card class="mat-elevation-z4">
           <mat-card-header>
-            <mat-card-title>Mountains {{num}}</mat-card-title>
+            <mat-card-title>{{menuItem.name}}</mat-card-title>
           </mat-card-header>
-          <img mat-card-image src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg">
+          <img mat-card-image src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg">
           <mat-card-content>
             <p>
-              The Himalayas is a mountain range in Asia.
+              {{menuItem.description}}
             </p>
+            <span>Hozzávalok:</span>
+            <div *ngFor="let ingredient of menuItem.ingredients">
+            <span class="p-2 m-2 text-bg-info rounded-3">{{ingredient.name}}</span>
+            </div>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button>LIKE</button>

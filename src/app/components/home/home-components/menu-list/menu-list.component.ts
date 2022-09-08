@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HomeService} from "../../../../services/home-service";
+import {MenuItem} from "../../../../models/MenuItem";
 
 @Component({
   selector: 'home-menu-list',
@@ -7,14 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private homeService: HomeService) { }
+
+  menuItems: MenuItem[] | undefined
+  count : number = 0
 
   ngOnInit(): void {
+    this.GetMenuItems();
   }
 
-  gridColumns = 3;
-
-  toggleGridColumns() {
-    this.gridColumns = this.gridColumns === 3 ? 4 : 3;
+  GetMenuItems(){
+    this.homeService.GetMenuItems().subscribe(response => {
+      if (response.isSuccess) {
+        this.menuItems = response.data;
+        this.count = response.total;
+      }else {
+      }
+    })
   }
 }

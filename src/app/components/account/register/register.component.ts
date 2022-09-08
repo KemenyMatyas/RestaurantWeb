@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   register(form: NgForm) {
     const credentials = JSON.stringify(form.value);
     this.loading=true;
-    this.userService.register(credentials).subscribe(response => {
+    this.userService.Register(credentials).subscribe(response => {
       if (response.isSuccess) {
         this.invalidLogin = false;
         this.loading=false;

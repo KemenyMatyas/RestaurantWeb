@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   login(form: NgForm) {
     const credentials = JSON.stringify(form.value);
     this.loading = true;
-    this.userService.login(credentials).subscribe(response => {
+    this.userService.Login(credentials).subscribe(response => {
       if(response.isSuccess){
         localStorage.setItem("jwt", response.data);
         this.invalidLogin=false;

@@ -1,7 +1,6 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
-import {User} from "../models/User";
 import {ApiResponse} from "../models/ApiResponse";
 
 @Injectable({
@@ -10,18 +9,18 @@ import {ApiResponse} from "../models/ApiResponse";
 export class UserApiService {
   constructor(private httpClient: HttpClient) { }
 
-  url = "https://localhost:44307"
+  url = "https://localhost:44307/api/User/"
 
-  login(user: string): Observable<any> {
-    return  this.httpClient.post<ApiResponse>(`${this.url}/api/User/login`, user, {
+  Login(user: string): Observable<any> {
+    return  this.httpClient.post<ApiResponse>(`${this.url}login`, user, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
       })
     })
   };
 
-  register(user: string): Observable<any> {
-    return  this.httpClient.post<ApiResponse>(`${this.url}/api/User/register`, user, {
+  Register(user: string): Observable<any> {
+    return  this.httpClient.post<ApiResponse>(`${this.url}register`, user, {
       headers: new HttpHeaders({
         "Content-Type": "application/json"
       })
