@@ -9,6 +9,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -18,13 +19,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CartComponent,
     FilterComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatButtonModule,
-    FlexLayoutModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        MatPaginatorModule
+    ]
 })
 export class HomeModule { }
