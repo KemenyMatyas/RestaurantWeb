@@ -10,6 +10,10 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSelectModule} from "@angular/material/select";
+
 
 
 @NgModule({
@@ -19,14 +23,18 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     CartComponent,
     FilterComponent
   ],
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        MatCardModule,
-        MatToolbarModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        MatPaginatorModule
-    ]
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatIconModule,
+    MatSelectModule,
+
+  ]
 })
 export class HomeModule { }
