@@ -2,7 +2,6 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {ApiResponse} from "../models/ApiResponse";
-import {PaginationFilter} from "../models/PaginationFilter";
 
 @Injectable({
   providedIn: 'root'

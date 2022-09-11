@@ -1,11 +1,10 @@
-import {MenuType} from "./enums/MenuType";
-import {MenuCategory} from "./enums/MenuCategory";
 import {Ingredients} from "./Ingredients";
+import {Category} from "./Category";
 
 export interface MenuItem{
+  id: string,
   name:string,
-  menuType: MenuType,
-  menuCategory: MenuCategory
+  category: Category
   description: string,
   price: number
   ingredients: Ingredients[]

@@ -2,9 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HomeService} from "../../../../services/home-service";
 import {MenuItem} from "../../../../models/MenuItem";
 import {PageEvent} from "@angular/material/paginator";
-import {PaginationFilter} from "../../../../models/PaginationFilter";
 import {HttpParams} from "@angular/common/http";
-import {MenuCategory} from "../../../../models/enums/MenuCategory";
 
 @Component({
   selector: 'home-menu-list',
@@ -21,7 +19,7 @@ export class MenuListComponent implements OnInit {
   pageSize: number = 10
   pageNumber: number = 1
   name = ""
-  category : MenuCategory = 0
+  category : string = ""
   menuItems: MenuItem[] | undefined
   count : number = 0
 
@@ -46,7 +44,7 @@ export class MenuListComponent implements OnInit {
       this.params = this.params.delete('name')
     }
     if (this.category) {
-      this.params = this.params.set('category', MenuCategory[this.category])
+      this.params = this.params.set('category', this.category)
     } else {
       this.params = this.params.delete('category')
     }
