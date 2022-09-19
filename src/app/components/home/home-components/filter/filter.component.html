@@ -1,22 +1,28 @@
 <div class="row">
   <div class="col-md-3">
-      <mat-form-field appearance="fill">
-        <mat-label>Keresés</mat-label>
-        <input matInput>
-      </mat-form-field>
-  </div>
-  <div class="col-md-3">
-    <mat-form-field>
-      <mat-label>Kategória</mat-label>
-      <mat-select>
-        <mat-option value="option1">Option 1</mat-option>
-      </mat-select>
+    <mat-form-field appearance="fill">
+      <mat-label>Keresés</mat-label>
+      <input matInput>
     </mat-form-field>
   </div>
   <div class="col-md-3">
-    <button mat-button color="primary">Keresés
-      <mat-icon inline>search</mat-icon>
-    </button>
+    <mat-form-field appearance="fill">
+      <mat-label>Kategória</mat-label>
+      <mat-select  [(value)]="selectedCategory">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let category of categories"  [value]="category.guid">
+          {{category.name}}
+        </mat-option>
+      </mat-select>
 
+    </mat-form-field>
+  </div>
+  <div class="col-md-3">
+      <button mat-button color="primary" (click)="Search()">
+        Keresés
+        <mat-icon inline>search</mat-icon>
+      </button>
   </div>
 </div>
+
+<span>{{selectedCategory}}asd</span>

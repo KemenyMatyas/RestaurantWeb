@@ -13,6 +13,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
+import {NgxMatSelectSearchModule} from "ngx-mat-select-search";
 
 
 
@@ -34,6 +35,7 @@ import {MatSelectModule} from "@angular/material/select";
     MatInputModule,
     MatIconModule,
     MatSelectModule,
+    NgxMatSelectSearchModule,
 
   ]
 })

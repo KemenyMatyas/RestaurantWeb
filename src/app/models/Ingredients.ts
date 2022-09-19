@@ -1,4 +1,5 @@
-export interface Ingredients{
-  id: string,
+import {BaseEntity} from "./BaseEntity";
+
+export interface Ingredients  extends BaseEntity{
   name:string
 }

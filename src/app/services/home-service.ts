@@ -28,6 +28,12 @@ export class HomeService {
     })
   };
 
-
+  GetCategories(): Observable<ApiResponse> {
+    return  this.httpClient.get<ApiResponse>(`${this.url}getCategories`,{
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    })
+  };
 
 }
