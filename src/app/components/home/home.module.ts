@@ -14,6 +14,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import {NgxMatSelectSearchModule} from "ngx-mat-select-search";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -36,6 +37,7 @@ import {NgxMatSelectSearchModule} from "ngx-mat-select-search";
     MatIconModule,
     MatSelectModule,
     NgxMatSelectSearchModule,
+    FormsModule,
 
   ]
 })

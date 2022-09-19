@@ -1,8 +1,9 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {HomeService} from "../../../../services/home-service";
 import {MenuItem} from "../../../../models/MenuItem";
 import {PageEvent} from "@angular/material/paginator";
 import {HttpParams} from "@angular/common/http";
+import {SearchData} from "../../../../models/SearchData";
 
 @Component({
   selector: 'home-menu-list',
@@ -12,6 +13,8 @@ import {HttpParams} from "@angular/common/http";
 export class MenuListComponent implements OnInit {
 
   constructor(private homeService: HomeService) { }
+
+  @Input() searchData : SearchData
 
   params = new HttpParams()
 

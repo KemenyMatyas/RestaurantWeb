@@ -12,5 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchData : any
 
+  Search(searchData : any){
+    this.searchData = searchData
+  }
 }

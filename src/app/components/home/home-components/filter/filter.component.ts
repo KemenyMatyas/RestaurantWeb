@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Category} from "../../../../models/Category";
 import {HomeService} from "../../../../services/home-service";
+import {SearchData} from "../../../../models/SearchData";
 
 
 @Component({
@@ -12,6 +13,9 @@ export class FilterComponent implements OnInit {
 
   constructor(private homeService : HomeService) { }
 
+  @Output() searchEmit = new EventEmitter<SearchData>();
+
+  searchWord = ""
   categories : Category[] = []
   selectedCategory : string = ""
 
@@ -29,7 +33,8 @@ export class FilterComponent implements OnInit {
   }
 
   Search(){
-      
+    console.log(this.searchWord)
+      this.searchEmit.emit({searchWord : this.searchWord, category: this.selectedCategory})
   }
 
 }

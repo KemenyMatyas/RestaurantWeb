@@ -1,14 +1,14 @@
 <div class="row">
   <div class="col-md-3">
     <mat-form-field appearance="fill">
-      <mat-label>Keresés</mat-label>
+      <mat-label [(ngModel)]="searchWord">Keresés</mat-label>
       <input matInput>
     </mat-form-field>
   </div>
   <div class="col-md-3">
     <mat-form-field appearance="fill">
       <mat-label>Kategória</mat-label>
-      <mat-select  [(value)]="selectedCategory">
+      <mat-select  [(ngModel)]="selectedCategory">
         <mat-option>None</mat-option>
         <mat-option *ngFor="let category of categories"  [value]="category.guid">
           {{category.name}}
