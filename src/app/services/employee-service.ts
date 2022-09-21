@@ -11,14 +11,14 @@ export class EmployeeService {
   url = "https://localhost:44307"
 
 
-  UploadImage(inpudata:any){
-    return this.httpClient.post<ApiResponse>(`${this.url}/api/employee`,inpudata,{
-      reportProgress:true,
-      observe:'events'
-    });
-  }
-  RemoveImage(code:any){
-    return this.httpClient.get<ApiResponse>("https://localhost:44308/api/Product/RemoveImage/"+code);
-  }
+  //UploadImage(inpudata:any){
+    //return this.httpClient.post<ApiResponse>(`${this.url}/api/employee`,inpudata,{
+      //eportProgress:true,
+      //observe:'events'
+    //});
+  //}
+  //RemoveImage(code:any){
+    //return this.httpClient.get<ApiResponse>("https://localhost:44308/api/Product/RemoveImage/"+code);
+  //}
 
 }

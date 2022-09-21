@@ -3,7 +3,6 @@ import {HttpParams} from "@angular/common/http";
 import {PageEvent} from "@angular/material/paginator";
 import {MenuItem} from "../../models/MenuItem";
 import {HomeService} from "../../services/home-service";
-import {compareSegments} from "@angular/compiler-cli/src/ngtsc/sourcemaps/src/segment_marker";
 import {SearchData} from "../../models/SearchData";
 
 @Component({
