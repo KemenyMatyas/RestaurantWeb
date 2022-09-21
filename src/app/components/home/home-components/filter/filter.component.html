@@ -1,14 +1,14 @@
 <div class="row">
   <div class="col-md-3">
     <mat-form-field appearance="fill">
-      <mat-label [(ngModel)]="searchWord">Keresés</mat-label>
-      <input matInput>
+      <mat-label >Keresés</mat-label>
+      <input name="searchWord" [(ngModel)]="searchWord" matInput>
     </mat-form-field>
   </div>
   <div class="col-md-3">
     <mat-form-field appearance="fill">
       <mat-label>Kategória</mat-label>
-      <mat-select  [(ngModel)]="selectedCategory">
+      <mat-select name="selectedCategory" [(ngModel)]="selectedCategory">
         <mat-option>None</mat-option>
         <mat-option *ngFor="let category of categories"  [value]="category.guid">
           {{category.name}}
@@ -24,5 +24,3 @@
       </button>
   </div>
 </div>
-
-<span>{{selectedCategory}}asd</span>

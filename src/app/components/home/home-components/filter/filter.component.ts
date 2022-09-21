@@ -27,13 +27,11 @@ export class FilterComponent implements OnInit {
     this.homeService.GetCategories().subscribe(res => {
       if(res.isSuccess){
         this.categories = res.data;
-        console.log(res.data)
       }
     })
   }
 
   Search(){
-    console.log(this.searchWord)
       this.searchEmit.emit({searchWord : this.searchWord, category: this.selectedCategory})
   }
 
