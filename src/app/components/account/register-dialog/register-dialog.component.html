@@ -1,1 +1,77 @@
-<p>register-dialog works!</p>
+<div class="container w-70">
+
+
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="register(loginForm)">
+    <div class="container-fluid">
+      <h2 class="form-signin-heading">Regisztráció</h2>
+      <div *ngIf="invalidLogin" class="alert alert-danger">{{error}}</div>
+      <br/>
+
+
+      <div class="row">
+
+        <div class="col-md-6" style="background: red">
+          <!-- email -->
+          <label for="email" class="sr-only">Email cím</label>
+          <input type="email" id="email" name="email" ngModel class="form-control" placeholder="Email" required>
+          <br/>
+
+          <!-- Vezetéknév -->
+          <label for="lastName" class="sr-only">Vezetéknév</label>
+          <input type="text" id="lastName" name="lastname" ngModel class="form-control" placeholder="Vezetéknév" required>
+          <br/>
+
+          <!-- Keresztnév -->
+          <label for="firstName" class="sr-only">Keresztnév</label>
+          <input type="text" id="firstName" name="firstname" ngModel class="form-control" placeholder="Keresztnév" required>
+          <br/>
+
+          <!-- Jelszó -->
+          <label for="password" class="sr-only">Jelszó</label>
+          <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Jelszó" required>
+          <br/>
+
+          <!-- Jelszó újra -->
+          <label for="confirmPass" class="sr-only">Jelszó újra</label>
+          <input type="password" id="confirmPass" name="confirmPass" ngModel class="form-control" placeholder="Jelszó újra" required>
+          <br/>
+        </div>
+
+
+        <div class="col-md-6" style="background: aqua">
+
+          <!-- Irányítószám -->
+          <label for="PostalCode" class="sr-only">Irányítószám</label>
+          <input type="number" id="PostalCode" name="PostalCode" ngModel class="form-control" placeholder="Irányítószám" required>
+          <br/>
+
+          <!-- Város -->
+          <label for="City" class="sr-only">Város</label>
+          <input type="text" id="City" name="City" ngModel class="form-control" placeholder="Város" required>
+          <br/>
+
+          <!-- Utca -->
+          <label for="Street" class="sr-only">Utca</label>
+          <input type="text" id="Street" name="Street" ngModel class="form-control" placeholder="Utca" required>
+          <br/>
+
+          <!-- Utca -->
+          <label for="Number" class="sr-only">Házszám</label>
+          <input type="text" id="Number" name="Number" ngModel class="form-control" placeholder="Házszám" required>
+          <br/>
+
+
+
+        </div>
+
+      </div>
+
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Regisztráció
+        <div *ngIf="loading" class="spinner-border spinner-border-sm" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </button>
+    </div>
+  </form>
+</div>

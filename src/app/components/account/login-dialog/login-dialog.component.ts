@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgForm} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {UserApiService} from "../../../services/user-api-service";
+import {RegisterDialogComponent} from "../register-dialog/register-dialog.component";
 
 @Component({
   selector: 'app-login-dialog',
@@ -11,7 +12,7 @@ import {UserApiService} from "../../../services/user-api-service";
   styleUrls: ['./login-dialog.component.css']
 })
 export class LoginDialogComponent implements OnInit {
-  constructor(public dialogRef: MatDialogRef<LoginDialogComponent>, private router: Router, private http: HttpClient,private userService: UserApiService, private route: ActivatedRoute) {}
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<LoginDialogComponent>, private router: Router, private http: HttpClient,private userService: UserApiService, private route: ActivatedRoute) {}
   routerURL!: string;
   loading = false;
   error = "";
@@ -50,9 +51,9 @@ export class LoginDialogComponent implements OnInit {
   };
 
   register(){
-    this.dialogRef.close()
-    this.router.navigate(["register"]);
+    this.dialog.open(RegisterDialogComponent, {
+      width: '700px',
+      height: '600px'
+    });
   }
-
-
 }

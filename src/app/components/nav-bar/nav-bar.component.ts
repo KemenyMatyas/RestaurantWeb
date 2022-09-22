@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
-import {LoginComponent} from "../account/login/login.component";
 import {LoginDialogComponent} from "../account/login-dialog/login-dialog.component";
+import {RegisterDialogComponent} from "../account/register-dialog/register-dialog.component";
 
 @Component({
   selector: 'app-nav-bar',
@@ -36,7 +36,15 @@ export class NavBarComponent implements OnInit {
 
   OpenLoginDialog(): void {
     this.dialog.open(LoginDialogComponent, {
-      width: '500px'
+      width: '700px',
+      height: '600px'
+    });
+  }
+
+  OpenRegisterDialog(): void {
+    this.dialog.open(RegisterDialogComponent, {
+      width: '700px',
+      height: '600px'
     });
   }
 
