@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {LoginComponent} from "../account/login/login.component";
+import {LoginDialogComponent} from "../account/login-dialog/login-dialog.component";
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +13,7 @@ export class NavBarComponent implements OnInit {
 
   isCollapsed = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public dialog: MatDialog) { }
 
 
   login(){
@@ -30,6 +33,12 @@ export class NavBarComponent implements OnInit {
     window.location.reload();
   }
 
+
+  OpenLoginDialog(): void {
+    this.dialog.open(LoginDialogComponent, {
+      width: '500px'
+    });
+  }
 
   ngOnInit(): void {
 

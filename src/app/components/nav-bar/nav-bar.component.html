@@ -13,7 +13,7 @@
         </li>
 
         <li class="nav-item m-2" *ngIf="!loggedIn()">
-          <a type="button" class="btn btn-primary" routerLink="login">Bejelentkezés</a>
+          <a type="button" class="btn btn-primary" (click)="OpenLoginDialog()">Bejelentkezés</a>
         </li>
 
         <li class="nav-item m-2" *ngIf="!loggedIn()">
